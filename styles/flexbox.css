@@ -140,7 +140,6 @@
     .menu__container{
         width: 239px;
         overflow: scroll;
-
     }
 /* Establece el estilo de visualización de las listas 2, 3 y 4 como flexbox */
     .menu__lista:nth-child(2),
@@ -153,31 +152,58 @@
         height: auto;
         padding: 20px 17px 20px 15px;
         gap: 15px;
-       
     }
-
     .menu__lista:nth-child(3){
         flex-direction: column-reverse;
-
     }
     .menu__itens{
         flex-direction: row;
         gap: 15px;
         align-items: center;
     }
-
     .videojuegos{
         order: 3;
     }
-
     .peliculas{
         order:2;
     }
-
     .premium{
         order:1;
     }
-
-    
-   
+}
+/* *Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+    }
+/* Establece el estilo de visualización de las listas 2, 3 y 4 como flexbox */
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+/* Establece el estilo general de las listas del menú */
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+    .videojuegos{
+        order: 3;
+    }
+    .peliculas{
+        order:2;
+    }
+    .premium{
+        order:1;
+    }
 }
