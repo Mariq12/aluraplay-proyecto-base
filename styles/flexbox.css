@@ -60,6 +60,13 @@
     overflow: scroll; /* para que se haga scroll */
     gap: 15px; /* espacio entre elementos */
 }
+
+/* *Sección Vídeos* */
+.videos__item {
+	height: 303px;
+	width: 280px;
+}
+
 /* *Rodapie* */
 .rodapie__container {
 	display: flex;
