@@ -65,6 +65,13 @@
 .videos__item {
 	height: 303px;
 	width: 280px;
+	/* flex-grow desaparece el espacio en lado derecho */
+	flex-grow: 1; /* para que los elementos se expandan */
+}
+.videos__container {
+	display: flex; /* para que los elementos se queden uno al lado del otro */
+	flex-wrap: wrap; /* para que los elementos se queden en la misma fila */
+	gap: 10px; /* espacio entre cada video */
 }
 
 /* *Desafío de la descripción de Vídeos* */
