@@ -67,6 +67,32 @@
 	width: 280px;
 }
 
+/* *Desafío de la descripción de Vídeos* */
+.descripcion-video {
+    /* Margen superior de 1 rem para separar la descripción del video */
+    margin-top: 1rem; 
+    /* Utiliza flexbox para alinear los elementos en un eje vertical */
+    display: flex;
+    /* Alinea los elementos al principio del contenedor en el eje vertical */
+    align-items: start;
+}
+.descripcion-video img {
+    /* Margen derecho de 1 rem para separar la imagen del texto */
+    margin-right: 1rem; 
+    /* Evita que la imagen se reduzca cuando el espacio es insuficiente */
+    flex-shrink: 0;  
+}
+.detalles__video {
+    /* Establece la disposición de los elementos en columnas */
+    flex-direction: column;
+    /* Alinea el texto a la izquierda */
+    text-align:left;
+}
+.detalles__video h3 {
+    /* Establece un margen inferior de 10px para el elemento h3 */
+    margin-bottom: 10px;
+}
+
 /* *Rodapie* */
 .rodapie__container {
 	display: flex;
