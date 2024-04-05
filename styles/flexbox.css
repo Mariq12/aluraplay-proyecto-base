@@ -1,0 +1,143 @@
+/*Los breakpoints estándar son:
+
+● Móviles: entre 320 y 480 píxeles.
+
+● Tablets: entre 768 y 1024 píxeles.
+
+● Pantallas grandes: más de 1200 píxeles.*/
+
+/* *Logo* */
+.logo__item {
+    margin-right: 200px;
+}
+
+/* *Cabecera* */
+.cabecera__container {
+    display:flex;
+    justify-content:space-between; /* distribuye el espacio horizontal dentro del contenedor flexbox */
+    align-items:center;
+    position: fixed; /* para que se quede fija */
+    top: 0; 
+}
+.cabecera__buscar__item {
+    /*margin-right: 200px;*/
+	display: none;
+}
+
+/* *Menu lateral* */
+.menu__container {
+    position: fixed; /* para que se quede fija */
+    bottom: 0; /* para que se quede en la parte inferior */
+    height: 75px; /* para que reduzca el tamaño y quede en la parte inferior */
+    width: 100%; /* abarque todo el ancho del body */
+}
+.menu__lista {
+    display:flex;
+    justify-content: space-between; /* para que los elementos se queden uno al lado del otro */
+    height: 100%;
+}
+.menu__lista li {
+    align-self: center; /* para que los elementos se queden centrados */
+}
+.menu__itens {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+/* *Oculta ciertos elementos de una lista de menú lateral.* */
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display:none;
+}
+
+/* *Sección superior* */
+.superior__seccion__container {
+    display:flex; /* para que los elementos se queden uno al lado del otro */
+    align-items: center;
+    white-space: nowrap; /* para que no se quiebre el texto dentro de esos elementos */
+    overflow: scroll; /* para que se haga scroll */
+    gap: 15px; /* espacio entre elementos */
+}
+/* *Rodapie* */
+.rodapie__container {
+	display: flex;
+    /* flex-direction: column;
+   flex-wrap: wrap; */
+    flex-flow: column wrap; /* Ayuda a cambiar de vertical a horizontal de los elementos */
+}
+
+/* *Tablet* */
+@media(min-width:834px) {
+    /* *Cabecera* */
+	.cabecera__buscar__item {
+		display:block
+	}
+	/* ***Desarrollar el menú para tablets*** */
+	.menu__container {
+    left: 0;
+    height: auto;
+    width: 74px;
+    top: 80px;
+	}
+	.menu__lista {
+		flex-direction: column;
+		justify-content: flex-start;
+		padding-top: 15px;
+		gap: 33px;
+	}
+	    /* *Rodapie* */
+    .rodapie__container {
+        justify-content: space-between;
+    }
+}
+
+/* *Adapta menú para dispositivos desktop* */
+/* que al menos tengan 1400 píxeles de ancho */
+@media (min-width:1440px ){
+/* Establece ancho máx del contenedor del menú/permite desplazamiento horizontal */
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+
+    }
+/* Establece el estilo de visualización de las listas 2, 3 y 4 como flexbox */
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+/* Establece el estilo general de las listas del menú */
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+       
+    }
+
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+
+    }
+    .menu__itens{
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .videojuegos{
+        order: 3;
+    }
+
+    .peliculas{
+        order:2;
+    }
+
+    .premium{
+        order:1;
+    }
+
+    
+   
+}
